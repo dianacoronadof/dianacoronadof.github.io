@@ -1,0 +1,157 @@
+---
+---
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,body {
+  margin:0;
+  padding:0;
+}
+
+html {
+  font: 16px/1.675 Georgia, serif;
+  color: #202020;
+}
+
+body {
+  font-size: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1,h2 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+#banner {
+  display:flex;
+  flex-direction: column-reverse;
+  background-color: #800;
+  color: white;
+  color: rgba(white,.925);
+  font-family: "Gill Sans", sans-serif;
+  padding: 2em;
+  h1 {
+    margin:0;
+    font-weight: normal;
+  }
+}
+
+#global {
+  background-color: #800;
+  padding: 0 2em;
+  display: flex;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  a,a:link {
+    background: rgba(white,0.675);
+    color: black;
+    text-decoration:none;
+    margin-right: 5px;
+    padding: .25em .625em;
+    border-radius: 5px 5px 0 0;
+  }
+
+  a:hover,
+  a:focus {
+    background: rgba(white,0.75);
+  }
+  a:active,
+  a.current {
+    backgroujnd: rgba(white,1);
+  }
+}
+
+#main {
+  padding: 2em;
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.content {
+    width: 80%;
+}
+
+#autores {
+  display:block;
+  background: hsla(30,25%,50%,.1);
+  width: 20%;
+  margin-right: 2em;
+  padding: 2em;
+
+  h1,h2 {
+    font-size: 1rem;
+    margin:0;
+    font-weight: normal;
+  }
+
+  h1 {
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(black,.2);
+  }
+  a {
+    display:block;
+    font-size: .825rem;
+  }
+}
+
+#palabras {
+  display:flex;
+
+  h2 {
+    font-size:1.25rem;
+  }
+}
+
+#palabras-nav {
+   width: 20%;
+  font-size: .825rem;
+  a,:link {
+    display:block;
+    text-decoration:none;
+    color: #800;
+  }
+}
+
+#tables {
+  width: 66%;
+}
+
+#tables section {
+  display:none;
+}
+
+#tables section:target {
+  display:block;
+}
+
+#tables table {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: .825rem;
+}
+
+#tables td {
+    padding: 5px 10px;
+}
+
+#tables thead th {
+    background: #585858;
+    color: white;
+    padding: 5px 10px;
+    line-height: 1.25;   
+}
+
+#tables tbody td {
+    background: #efefef;
+    background: rgba(0,0,0,0.063);
+    min-width: 100px;
+}
+© 2018 GitHub, Inc.
