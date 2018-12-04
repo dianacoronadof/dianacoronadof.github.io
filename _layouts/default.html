@@ -9,10 +9,6 @@
 </header>
 <nav id="global">
 <a href="{{ site.baseurl }}/">Inicio</a>
-<a href="{{ site.baseurl }}/edicion">Criterios de edición</a>
-<a href="{{ site.baseurl }}/reonocimientos">Equipo de trabajo</a>
-<a href="{{ site.baseurl }}/publicaciones">Publicaciones</a>
-<a href="{{ site.baseurl }}/contactenos">Contacto</a>
 </nav>
 
 <main id="main" role="main">
@@ -21,8 +17,6 @@
 </div>
 <nav id="autores">
 <h1>Navegación</h1>
-<h2>Palabras</h2>
-<a href="{{ site.baseurl }}/palabrasgeneral/">Glosario General</a>
 <h2>Autores</h2>
 {% for autore in site.autores %}
 <a href="{{ autore.url }}">{{ autore.title }}</a>
