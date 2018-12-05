@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<article>
+    <header>
+    <img src="{{ site.baseurl }}/imagenes/{{ page.data }}.jpg" alt="">
+    <h1>{{ page.title }}</h1>
+    </header>
+    {{ content }}
+
+    {% if page.data %}
+    <div id="palabras">
+
+      {% assign rows = site.data[page.data] %}
+
+      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+
+      {% assign unique_word_array = unique_word_string | split: ","%}
+      <nav class="local" id="palabras-nav">
+      {% for word in unique_word_array %}
+	<a href="#{{ word | downcase }}">{{ word }}</a>
+      {% endfor %}
+      </nav>
+
+      <div id="tables">
+      {% for word in unique_word_array %}
+	<section id="{{ word | downcase }}">
+        <h2>{{ word }}</h2>
+    	<table>
+          <thead>
+            <tr>
+              <th>Texto pag No</th>
+	      <th>Cita</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.pagina }}</td>
+              <td>{{ row.cita }}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+    </section>
+    {% endfor %}
+    </div>
+</div>
+    {% endif %}
+</article>
