@@ -17,7 +17,7 @@ layout: default
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 
       {% assign unique_word_array = unique_word_string | split: ","%}
-      <nav class="local" id="palabras-nav">
+      <nav class="local" id="autores">
       {% for word in unique_word_array %}
 	<a href="#{{ word | downcase }}">{{ word }}</a>
       {% endfor %}
