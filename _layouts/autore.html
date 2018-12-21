@@ -33,10 +33,21 @@ layout: default
             </tr>
           </thead>
           <tbody>
-          {% for row in rows %}
+		  
+      {% capture unique_word_string %}{% for row in rows %}
+      {% capture current_word %}{{ row.id_cronista }}{% endcapture %}
+      {% if current_word == saved_word %}{% else %}{{ row.id_cronista }},
+      {% endif %}
+      {% capture saved_word %}{{ current_word }}{% endcapture %}
+      {% endfor %}
+      {% endcapture %}
+		  
+		  {% for word in unique_word_array %}
+		  
           {% if row.Palabra == word %}
+		  
             <tr>
-              <td>{{ row.cita }}</td>
+              <td>{{ row.id_cronista }}</td>
             </tr>
           {% endif %}
           {% endfor %}
