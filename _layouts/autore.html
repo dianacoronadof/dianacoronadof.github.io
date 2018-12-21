@@ -13,8 +13,8 @@ layout: default
 
       {% assign rows = site.data[page.data] %}
 
-      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_texto }}{% endcapture %}
-      {% if current_word == saved_word %}{% else %}{{ row.id_texto }},{% endif %}
+      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}
+      {% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}
       {% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 
       {% assign unique_word_array = unique_word_string | split: ","%}
@@ -24,6 +24,41 @@ layout: default
 <a href="#{{ word | downcase }}">{{ word }}</a>
 {% endfor %}
 </nav>
+	
+<div id="tables">
+{% for word in unique_word_array %}
+<section id="{{ word | downcase }}">
+<h2>{{ word }}</h2>
+<table>
+<thead>
+            <tr>
+	      <th>Cita</th>
+            </tr>
+          </thead>
+<tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+	
+	{% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_cronista }}{% endcapture %}
+      {% if current_word == saved_word %}{% else %}{{ row.id_cronista }},{% endif %}
+      {% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+
+      {% assign unique_word_array = unique_word_string | split: ","%}
+	{% for word in unique_word_array %}
+	
+            <tr>
+<td>{{ row.id_cronista }}</td>
+            </tr>
+	{% endfor %}
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+    </section>
+    {% endfor %}
+    </div>
+
+	
 	
     {% endif %}
 	
