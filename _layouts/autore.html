@@ -28,7 +28,6 @@ layout: default
     	<table>
           <thead>
             <tr>
-              <th>Texto pag No</th>
 	      <th>Cita</th>
             </tr>
           </thead>
@@ -36,7 +35,6 @@ layout: default
           {% for row in rows %}
           {% if row.Palabra == word %}
             <tr>
-              <td>{{ row.pagina }}</td>
               <td>{{ row.cita }}</td>
             </tr>
           {% endif %}
