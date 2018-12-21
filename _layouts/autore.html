@@ -33,13 +33,11 @@ layout: default
             </tr>
           </thead>
           <tbody>
-          {% for row in rows %}
           {% if row.Palabra == word %}
             <tr>
               <td>{{ row.cita }}</td>
             </tr>
           {% endif %}
-          {% endfor %}
       </tbody>
     </table>
     </section>
