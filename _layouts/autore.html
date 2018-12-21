@@ -32,10 +32,12 @@ layout: default
 	      <th>Cronista</th>
             </tr>
           </thead>
-          <tbody>		  
+          <tbody>
+		   {% if row.Palabra == word %}
             <tr>
               <td>{{ row.id_cronista }}</td>
             </tr>
+		  {% endif %}
       </tbody>
     </table>
     </section>
