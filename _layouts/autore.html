@@ -44,12 +44,11 @@ layout: default
 		  
 		  {% for word in unique_word_array %}
 		  
-          {% if row.Palabra == word %}
 		  
             <tr>
               <td>{{ row.id_cronista }}</td>
             </tr>
-          {% endif %}
+
           {% endfor %}
       </tbody>
     </table>
