@@ -27,7 +27,7 @@ layout: default
 	<section id="{{ word | downcase }}">
         <h2>{{ word }}</h2>
 		
-		
+	{% if page.data2 %}
     	<table>
           <thead>
             <tr>
@@ -35,15 +35,16 @@ layout: default
             </tr>
           </thead>
           <tbody>
-	{% if page.data2 %}
+		  
             <tr>
               <td>{{ row.id_cronista }}</td>
             </tr>
-		  {% endif %}
+		 
 		   
 		 
       </tbody>
     </table>
+		 {% endif %}
     </section>
     {% endfor %}
     </div>
