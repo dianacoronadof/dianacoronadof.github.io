@@ -26,8 +26,7 @@ layout: default
       {% for word in unique_word_array %}
 	<section id="{{ word | downcase }}">
         <h2>{{ word }}</h2>
-		
-	{% if page.data2 %}
+
     	<table>
           <thead>
             <tr>
@@ -37,14 +36,14 @@ layout: default
           <tbody>
 		  
             <tr>
-              <td>{{ row.id_cronista }}</td>
+              <td>{{ id_cronista }}</td>
             </tr>
 		 
 		   
 		 
       </tbody>
     </table>
-		 {% endif %}
+
     </section>
     {% endfor %}
     </div>
