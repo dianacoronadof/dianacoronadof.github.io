@@ -35,16 +35,17 @@ layout: default
             </tr>
           </thead>
           <tbody>
-	
+	{% if page.data2 %}
 		  {% for row in rows %}
 		   {% if row.Palabra == word %}
-		  {% if page.data2 %}
+		  
             <tr>
               <td>{{ row.id_cronista }}</td>
             </tr>
 		  {% endif %}
-		   {% endif %}
+		   
 		   {% endfor %}
+		  {% endif %}
 	
       </tbody>
     </table>
