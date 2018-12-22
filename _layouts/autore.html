@@ -33,6 +33,7 @@ layout: default
             </tr>
           </thead>
           <tbody>
+		    {% if page.data2 %}
 		  {% for row in rows %}
 		   {% if row.Palabra == word %}
             <tr>
@@ -40,6 +41,7 @@ layout: default
             </tr>
 		  {% endif %}
 		  {% endfor %}
+		  {% endif %}
       </tbody>
     </table>
     </section>
