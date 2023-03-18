@@ -10,7 +10,10 @@
   margin: 30px;
   border: 2px solid #ccc;
   padding: 25px;
+  border-radius: 5px 15px 5px 15px;
 }
+
+  
 
 .menu li img {
   width: 80px;
