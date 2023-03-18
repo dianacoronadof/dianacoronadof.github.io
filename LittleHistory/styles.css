@@ -8,11 +8,11 @@
 
 .menu li {
   margin: 30px;
-  border: 6px solid #ccc;
+  border: 2px solid #ccc;
   padding: 15px;
 }
 
 .menu li img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
